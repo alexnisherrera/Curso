@@ -4,6 +4,15 @@ $px10: 10px
 
 /*☝🏻 @mixin es una herramienta para reutilizar código / una funcion ☝🏻*/
 
+@function opacidad($color,$nivel)
+	@return transparentize($color,$nivel)
+
+$talla: 10, 15, 20, 25, 30, 35
+
+@each $valor in $talla
+    .parrafo_#{$valor}
+        font-size: $valor * 1px
+
 /*Mixin SIN PARAMETROS*/
 @mixin colCenter()
 	display: flex
